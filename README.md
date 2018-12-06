@@ -1,3 +1,7 @@
+# Disclaimer:
+
+This is not my project. As a part of lighthouse lab's curriculum, we go through this project to experience how to work with taking on pre-existing code to become more acquainted with real-life work environments.
+
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
