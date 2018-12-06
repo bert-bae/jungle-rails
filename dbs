@@ -1,0 +1,600 @@
+\d
+\dts
+\dt
+\c
+\dt
+\d
+\c
+\d
+psql -U vagrant -d template1
+;
+CREATE ROLE labber WITH LOGIN password 'labber';
+\c labber
+\r labber
+\d
+\c test_db
+\d
+SELECT * FROM knex_migrations
+;
+\c labber
+\c labbers
+help?
+\?
+\c template1
+\d
+\db
+\dt
+\d
+CREATE DATABASE midterm OWNER labber;
+\db
+\dbs
+\d
+\c template1
+\d
+\c vagrant
+\d
+\c test_db
+\d
+\dt
+\dt midterm
+\d midterm
+\d
+\dt
+\c template1
+\dt
+\C
+\c
+\d
+\dt
+\c
+SELECT labber FROM pg_roles
+;
+\du
+\d
+\du
+\q
+createuser test_user
+;
+\du
+DROP ROLE test_user
+;
+SELECT template1 FROM pg_roles;
+\du
+SELECT labber FROM pg_roles;
+\du
+\c labber
+\r labber
+\o labber
+\d
+\dt
+;
+\du
+\c labber
+\o labber
+\c vagrant
+\c template1
+\d
+\dt
+SELECT * FROM template1
+;
+CREATE ROLE labber WITH LOGIN password 'labber';
+CREATE DATABASE midterm OWNER labber;
+\d
+\l
+\c midterm
+\d
+\DT
+\dt
+SELECT * FROM users
+;
+\c labber
+\c midterm
+SELECT * FROM *;
+\dt
+\dt
+SELECT * FROM migrations
+;
+\dt
+SELECT * FROM users
+q
+;
+SELECT * FROM users
+;7
+;
+\dt
+SELECT * FROM users;
+SELECT * FROM ranks;
+SELECT * FROM categories;
+SELECT * FROM events;
+\c midterm
+SELECT * FROM users
+;
+\c midterm
+\dt
+SELECT * FROM users;
+\c midterm
+\dt
+\dt
+\dt
+\dt
+\dt
+SELECT * FROM ranks;
+\dt
+\d
+\dt
+SELECT * FROM categories;
+SELECT * FROM ranks;
+SELECT * FROM ranks;
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+\dt
+SELECT * FROM events_users;
+SELECT * FROM users;
+SELECT users.name FROM users
+JOIN ranks ON rank_id = users.id
+WHERE ranks.type = 'admin';
+SELECT users.name FROM users
+JOIN ranks ON users.rank_id = ranks.id
+WHERE ranks.id = 1;
+\dt
+select * from users
+;
+select * from ranks;
+select * from events;
+select * from categories
+;
+select * from events_users;
+\dt
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+\c midterm
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM events;
+\dts
+\dts events
+\c midterm
+\dts
+\dt
+\d events
+SELECT * FROM events;
+\c midterm
+SELECT * FROM Events
+;
+select * from events
+;
+SELECT events.name, users.name, events.location, events.start_date, events.end_date, events.details, categories.type FROM events_users
+JOIN users ON events_users.user_id = users.id
+JOIN events ON events_users.event_id = events.id
+JOIN categories ON events.categories_id = categories.id
+WHERE events.main_url = M02cYo;
+SELECT events.name, users.name, events.location, events.start_date, events.end_date, events.details, 4ategories.type FROM events_users
+JOIN users ON events_users.user_id = users.id
+JOIN events ON events_users.event_id = events.id
+JOIN categories ON events.categories_id = categories.id
+WHERE events.main_url = M02cYo;
+SELECT events.name, users.name, events.location, events.start_date, events.end_date, events.detail, categories.type FROM events_users
+JOIN users ON events_users.user_id = users.id
+JOIN events ON events_users.event_id = events.id
+JOIN categories ON events.categories_id = categories.id
+WHERE events.main_url = M02cYo;
+SELECT events.name, users.name, events.location, events.start_date, events.end_date, events.detail, categories.type FROM events_users
+JOIN users ON events_users.user_id = users.id
+JOIN events ON events_users.event_id = events.id
+JOIN categories ON events.categories_id = categories.id
+WHERE events.main_url LIKE '%M02cYo%';
+SELECT * FROM Users
+;
+SELECT * FROM Users
+;
+SELECT * FROM Users
+;
+\midterm
+\dt
+\c midterm
+\dt
+DROP TABLE Categories
+;
+DROP TABLE events_users;
+drop table events;
+drop table users;
+drop table ranks;
+drop table categories;
+\dt
+\dt
+\d categories
+\d events
+\users
+\d users
+\events_users
+\d events_users
+\c midterm
+SELECT * FROM events
+;
+\dt
+\d events
+\d events_users;
+select * events_users;
+select * from events_users;
+select * from users;
+select * from events;
+select * from ranks;
+select * from categories;
+select * from users;
+select * from events_users;
+select * from users;
+select * from categories;
+select * from categories;
+select * from categories;
+select * from categories;
+select * from ranks;
+select * from users;
+select * from users;
+select * from ranks;
+select * from categories;
+select * from categories;
+select * from categories;
+select * from ranks;
+select * from ranks;
+select * from categories;
+select * from users;
+select * from users;
+select * from users;
+\q
+\c midterm
+SELECT * from events;
+SELECT events.name AS event_name, users.name AS user_name, events.location AS location, events.start_date, events.end_date, events.detail, categories.type FROM events_users
+      JOIN users ON events_users.user_id = users.id
+      JOIN events ON events_users.event_id = events.id
+      JOIN categories ON events.categories_id = categories.id
+      WHERE events.main_url = 'abcdef';
+select * from events
+;
+SELECT events.name AS event_name, users.name AS user_name, events.location AS location, events.start_date, events.end_date, events.detail, categories.type FROM events_users
+      JOIN users ON events_users.user_id = users.id
+      JOIN events ON events_users.event_id = events.id
+      JOIN categories ON events.categories_id = categories.id
+      WHERE events.main_url = 'abcdef';
+select * from events
+;
+select * from events
+;
+select * from events
+;
+select * from events
+;
+select * from events
+;
+select * from events
+;
+select * from events
+;
+select * from events;
+SELECT events.name AS event_name, users.name AS user_name, events.location AS location, events.start_date, events.end_date, events.detail, categories.type FROM events_users
+      JOIN users ON events_users.user_id = users.id
+      JOIN events ON events_users.event_id = events.id
+      JOIN categories ON events.categories_id = categories.id
+      WHERE events.main_url = 'abcdef';
+select * from users;
+select * from events;
+\c midterm
+\dt
+select * from events;
+SELECT * USERS;
+select * from users;
+select * events_users;
+select * from events_users;
+select * from events_users;
+SELECT * FROM users;
+SELECT * FROM events;
+SELECT * FROM events_users;
+SELECT * FROM events;
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+SELECT * FROM events;
+SELECT * FROM users;
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+SELECT * FROM users;
+SELECT * FROM events;
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+\d events_users 
+\d events
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+SELECT * FROM events_users;
+select * from events;
+select * from users;
+select * from events_users;7
+select * from events;
+select * from events;
+select * from proposed_dates
+;
+select * from events_users
+;
+select * from events_users
+;
+select * from proposed_time_slots;
+\d
+select * from proposed_dats;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from events_users;
+select * from events;
+select * from events_users;
+select * from events;
+\dt
+\dt
+\c midterm
+\dt proposed_time
+\dt proposed_date
+\d
+\dt proposed_dates
+\d proposed_dats
+\d proposed_dates
+SELECT * FROM proposed_dates;
+SELECT * FROM proposed_dates;
+SELECT * FROM proposed_dates;
+SELECT * FROM proposed_dates;
+DELETE FROM proposed_dates;
+\d proposed_dates
+SELECT * FROM proposed_dates;
+\d proposed_dates
+rs
+;
+SELECT * FROM proposed_dates;
+SELECT * FROM proposed_dates;
+SELECT * FROM events;
+select * proposed_dates;
+select * proposed_date;
+select * from proposed_dates;
+select * from events;
+select * from events;
+select * from events;
+\d events
+select * from events;
+select * from events;
+select * from events;
+select * from events;
+select * from users;
+select * from events;
+select * from users;
+select * from users;
+select * from users;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from users;
+select * from events;
+select * from users;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from events;
+4
+;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from events;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates JOIN events ON events.id = proposed_dates.
+event_id
+WHERE events.main_url = '7uc215we';
+select proposed_start_time from proposed_dates JOIN events ON events.id = proposed_dates.
+event_id
+WHERE events.main_url = '7uc215we';
+select proposed_start_time from proposed_dates JOIN events ON events.id = proposed_dates.
+event_id
+WHERE events.main_url = '7uc215we';
+\c midterm
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from proposed_dates;
+SELECT * from events;
+select proposed_start_time from proposed_dates JOIN events ON events.id = proposed_dates.
+event_id
+WHERE events.main_url = '7uc215we';
+select * from proposed_dates;
+select * from proposed_dates;
+\d proposed_dates;
+\d proposed_dates;
+\d proposed_dates;
+DELETE TABLE proposed_dates;
+delete proposed_dates;
+delete data FROM proposed_dates;
+delete table from proposed_dates;
+delete from proposed_dates;
+delete from proposed_dates;
+\d proposed_dates;
+\d proposed_dates;
+\d proposed_dates;
+\d events;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates;
+\d proposed_dates
+select * from proposed_dates;
+select * from events;
+rs
+\q
+select * from events;
+\c midterm
+\c midterm
+select * from events;
+select * from proposed_dates;
+select * from events;
+select * from events;SELECT * FROM proposed_dates
+;
+SELECT * FROM proposed_dates
+      JOIN events ON events.id = proposed_dates.event_id
+      WHERE events.main_url = 'whec7q59';
+select * FROM events;
+select * FROM events;
+\q
+\d proposed_dates;
+select * from events_users;
+select * from users;
+select * from events;
+rs
+;
+psql
+;
+select * from proposed_Dates;
+select * from events;
+select * from proposed_Dates;
+rs
+;
+select * from events;
+select * proposed_dates;
+select * from proposed_dates;
+rs
+;
+rs
+;
+select * from proposed_dates;
+select * from events;
+select * from proposed_dates;
+select * from events;
+\c midter
+\c midterm
+select * from users;
+delete from users;
+drop from users;
+delete * from users;
+DELETE FROM users;
+select * from proposed_dates;
+select * events;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates;
+\q
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+\d proposed_dates;
+rs
+\q
+select * from proposed_dates;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from users;
+rs
+\q
+select * from proposed_dates;
+select * from proposed_dates;
+select * from users;
+select * from events;
+select * events_users;
+select * from  events_users;
+\q
+\c midterm
+select * from proposed_dates;
+select * from proposed_dates;
+select * from users;
+select * from events_users;
+select * from events;
+select * from events_users;
+select * from events_users;
+select * from users;
+select * from events_users;
+select * from events_users;
+select * from events_users;
+select * from events;
+select * from proposed_dates;
+select * from proposed_dates;
+select * from events_users;
+select * from users;
+select * from events_users;
+select * from proposed_dates;
+\c midterm
+select *, proposed_dates.id AS time_id FROM proposed_dates WHERE events.main_url = 'ubjux7v2';
+select *, proposed_dates.id AS time_id FROM proposed_dates JOIN events ON events.id = proposed_Dates.event_id WHERE events.main_url = 'ubjux7v2';
+select *, proposed_dates.id AS time_id FROM proposed_dates JOIN events ON events.id = proposed_Dates.event_id WHERE events.main_url = 'ubjux7v2';
+select *, proposed_dates.id AS time_id FROM proposed_dates JOIN events ON events.id = proposed_Dates.event_id WHERE events.main_url = 'ubjux7v2' ORDER BY date;
+select *, proposed_dates.id AS time_id FROM proposed_dates JOIN events ON events.id = proposed_Dates.event_id WHERE events.main_url = 'ubjux7v2' ORDER BY date;
+select *, proposed_dates.id AS time_id FROM proposed_dates JOIN events ON events.id = proposed_Dates.event_id WHERE events.main_url = 'ubjux7v2' ORDER BY date;
+select * from events;
+select * from proposed_dates;
+postgres
+;
+create database ar_exercises
+;
+ar_exercises;
+mydb ar_exercises
+;
+ls
+help
+;
+\h
+ar_exercises
+;
+SELECT * FROM ar_exercises
+;
+/c ar_exercises
+;
+\d ar_exercises;
+\c ar_exercises
+select * from ar_exercises
+;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from stores;
+select * from employees
+;
+/db
+;
+show db
+;
+show dbs;
+\c jungle
+\c
+\c dbs
+\s dbs
