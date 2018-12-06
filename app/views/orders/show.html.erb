@@ -4,9 +4,24 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+  <h3>Here are the details of your order.</h3>
+
+  <% @order.line_items.each do |item| %>
+    <img src="<%= item.product.image %>" style="height: 550px; width: 550px;" alt="product"/>
+    <p>Product Name: <%= item.product.name %></p>
+    <p>Description: <%= item.product.description %></p>
+    <p>Quantity: <%= item.quantity %></p>
+    <p>Total: $<%= item.total_price_cents.to_f / 100 %></p>
+  <% end %>
+  <h4>Total Price: $<%= @order.total_cents.to_f / 100 %></h4>
+
+  
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <h4>Email: <%= @order.email %></h4>
   </div>
+
+  
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
