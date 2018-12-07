@@ -132,5 +132,85 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+user1 = User.create!({
+  id: 1,
+  name: "Blep",
+  password: "123",
+})
+
+user2 = User.create!({
+  id: 2,
+  name: "Blep",
+  password: "123",
+})
+
+user3 = User.create!({
+  id: 3,
+  name: "Blep",
+  password: "123",
+})
+
+review1 = Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 5,
+})
+
+review2 = Review.create!({
+  product_id: 1,
+  user_id: 2,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 3,
+})
+
+review3 = Review.create!({
+  product_id: 1,
+  user_id: 3,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 2,
+})
+
+review4 = Review.create!({
+  product_id: 2,
+  user_id: 1,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 5,
+})
+
+review5 = Review.create!({
+  product_id: 2,
+  user_id: 2,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 3,
+})
+
+review6 = Review.create!({
+  product_id: 2,
+  user_id: 3,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 2,
+})
+
+review7 = Review.create!({
+  product_id: 3,
+  user_id: 1,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 5,
+})
+
+review8 = Review.create!({
+  product_id: 3,
+  user_id: 2,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 3,
+})
+
+review9 = Review.create!({
+  product_id: 3,
+  user_id: 3,
+  description: "Lorem blarg ipsum haha giggle shits boop",
+  rating: 2,
+})
 
 puts "DONE!"
