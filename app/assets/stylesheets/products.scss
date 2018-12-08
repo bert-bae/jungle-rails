@@ -87,9 +87,49 @@ main section.products-show {
   }
 }
 
+.total-cost {
+  padding-left: 10px;
+}
+
+.order-details {
+  display: flex;
+  margin: 15px 0 0 0;
+}
+
+.order-details .image {
+  order: 1;
+}
+
+.order-details .details {
+  order: 2;
+}
+
 .comments {
   background-color: rgb(216, 216, 216);
   opacity: 0.9;
   padding: 10px;
   border-radius: 5px;
+}
+
+.review-form {
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.review-form h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.review-form span {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#review_description {
+  width: 70%;
+  height: 40px;
 }

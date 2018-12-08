@@ -7,13 +7,25 @@
   <h3>Here are the details of your order.</h3>
 
   <% @order.line_items.each do |item| %>
-    <img src="<%= item.product.image %>" style="height: 550px; width: 550px;" alt="product"/>
-    <p>Product Name: <%= item.product.name %></p>
-    <p>Description: <%= item.product.description %></p>
-    <p>Quantity: <%= item.quantity %></p>
-    <p>Total: $<%= item.total_price_cents.to_f / 100 %></p>
+    <hr/>
+    <div class="order-details">
+      <hr/>
+        <div class="col-sm-6 image">
+          <img src="<%= item.product.image %>" style="height: 550px; width: 550px;" alt="product"/>
+        </div>
+        <div class="col-sm-6 details">
+          <h3>Product Name: <%= item.product.name %></h3>
+          <hr/>
+          <p><strong>Description:</strong><br/></p>
+          <p><%= item.product.description %></p>
+          <p><strong>Quantity: </strong>
+          <p><%= item.quantity %></p>
+          <p><strong>Subtotal: </strong></p>
+          <p>$<%= item.total_price_cents.to_f / 100 %></p>
+        </div>
+    </div>
   <% end %>
-  <h4>Total Price: $<%= @order.total_cents.to_f / 100 %></h4>
+  <span class="total-cost"><h4><strong>Total Price:</strong> $<%= @order.total_cents.to_f / 100 %></h4></span>
 
   
   <div class="order-summary jumbotron">

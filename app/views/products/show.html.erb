@@ -30,12 +30,13 @@
   </article>
 
 <% if current_user %>
-  <%= form_for [@product, Review.new] do |f| %>
-    
-    Rating: <%= f.select :rating, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]) %>
-    Description: <%= f.text_field :description %>
-    <%= f.submit "Submit" %>
-  
+  <div class="review-form">
+    <h3><strong>Already bought it? Leave a review!</strong></h3>
+    <%= form_for [@product, Review.new] do |f| %>
+      Rating: <%= f.select :rating, options_for_select([['5', 5], ['4', 4], ['3', 3], ['2', 2], ['1', 1]]) %><span>
+      Description: <%= f.text_field :description %></span>
+      <%= f.submit "Submit", class: 'btn btn-xs btn-success' %>
+  </div>
   <% end %>
 <% end %>
   
