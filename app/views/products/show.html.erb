@@ -29,20 +29,25 @@
 
   </article>
 
-  <%= form_for :review, url: '/products/:product_id/reviews' do |f| %>
-
+<% if current_user %>
+  <%= form_for [@product, Review.new] do |f| %>
+    
     Rating: <%= f.select :rating, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]) %>
     Description: <%= f.text_field :description %>
     <%= f.submit "Submit" %>
   
   <% end %>
+<% end %>
   
+
   <div>
     <dt>Reviews</dt>
     <hr></hr>
-    <% @product.reviews.each do |review| %>
-      <p><%= review.rating %></p>
-      <p><%= review.description %></p>
+    <% @product.reviews.reverse_each do |review| %>
+      <div class="comments">
+        <p><strong>Rating: </strong><%= review.rating %></p>
+        <p><strong>Description: </strong><%= review.description %></p>
+      </div>
       <hr></hr>
     <% end %>
   </div>
