@@ -45,8 +45,15 @@
     <hr></hr>
     <% @product.reviews.reverse_each do |review| %>
       <div class="comments">
+        <p><strong>User: </strong><%= review.user.name %> - User Since <%= review.user.created_at.to_date %></p>
+        <hr/>
         <p><strong>Rating: </strong><%= review.rating %></p>
         <p><strong>Description: </strong><%= review.description %></p>
+        <% if current_user %>
+          <% if current_user.id == review.user_id %>
+            <%= button_to "Delete Review ", product_review_path(@product, review), method: :delete, class: 'btn btn-xs btn-danger'%>
+          <% end %>
+        <% end %>
       </div>
       <hr></hr>
     <% end %>

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_filter :authorize, :only => [:create, :destroy]
 
   def create
     @review = Review.new(params.require(:review).permit(:rating, :description))
@@ -11,4 +12,17 @@ class ReviewsController < ApplicationController
       redirect_to @review.product
     end
   end
+
+  def destroy
+    @review = Review.find params[:id]
+    @review.destroy
+    redirect_to :products
+  end
+
+  private
+
+    def valid
+
+    end
+
 end
