@@ -133,19 +133,22 @@ cat3.products.create!({
 })
 
 user1 = User.create!({
-  name: "Blep",
+  first_name: "Test",
+  last_name: "Test",
   email: "test@gmail.com",
   password: "123",
 })
 
 user2 = User.create!({
-  name: "Blep",
+  first_name: "Test",
+  last_name: "Test",
   email: "test@gmail.com",
   password: "123",
 })
 
 user3 = User.create!({
-  name: "Blep",
+  first_name: "Test",
+  last_name: "Test",
   email: "test@gmail.com",
   password: "123",
 })

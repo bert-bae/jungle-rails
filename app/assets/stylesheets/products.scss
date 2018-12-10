@@ -133,3 +133,15 @@ main section.products-show {
   width: 70%;
   height: 40px;
 }
+
+.register-form label {
+	float: left;
+	text-align: right;
+	margin-right: 15px;
+  width: 150px;
+  margin-top: 10px
+}
+
+.register-form input {
+  margin-top: 10px;
+}
