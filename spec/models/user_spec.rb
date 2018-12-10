@@ -90,5 +90,28 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
+    it 'should be nil if password and email do not match with existing account' do
+      @user.save
+      match = User.authenticate_with_credentials('email@email.com', 'blah')
+      expect(match).to be_falsey
+    end
+
+    it 'should be true if password and email match with existing account' do
+      @user.save
+      match = User.authenticate_with_credentials('email@email.com', 'test1')
+      expect(match).to be_truthy
+    end
+
+    it 'should login with valid credentials even with leading and trailing spaces in email' do
+      @user.save
+      match = User.authenticate_with_credentials(' email@email.com ', 'test1')
+      expect(match).to be_truthy
+    end
+
+    it 'should login with valid credentials even with random upper/lowercase placements spaces in email' do
+      @user.save
+      match = User.authenticate_with_credentials(' eMAil@emaIl.COm ', 'test1')
+      expect(match).to be_truthy
+    end
   end
 end
