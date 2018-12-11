@@ -1,4 +1,4 @@
-class CreateReviews < ActiveRecord::Migration
+class CreateReviews < ActiveRecord::Migration[5.2.2]
   def change
     create_table :reviews do |t|
       t.references :product, index: true, foreign_key: true
