@@ -10,6 +10,7 @@ main section.categories-show {
     .product {
       // flex:      1;
       max-width: 260px;
+      min-width: 260px;
       // so that footer within can be positioned absolutely
       position:  relative;
 
