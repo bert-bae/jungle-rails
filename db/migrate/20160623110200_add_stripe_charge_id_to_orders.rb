@@ -1,4 +1,4 @@
-class AddStripeChargeIdToOrders < ActiveRecord::Migration[5.2.2]
+class AddStripeChargeIdToOrders < ActiveRecord::Migration[5.2]
   def change
     add_column :orders, :stripe_charge_id, :string
   end
