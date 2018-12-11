@@ -136,21 +136,21 @@ user1 = User.create!({
   first_name: "Test",
   last_name: "Test",
   email: "test@gmail.com",
-  password: "123",
+  password: "1234",
 })
 
 user2 = User.create!({
   first_name: "Test",
   last_name: "Test",
   email: "test@gmail.com",
-  password: "123",
+  password: "1234",
 })
 
 user3 = User.create!({
   first_name: "Test",
   last_name: "Test",
   email: "test@gmail.com",
-  password: "123",
+  password: "1234",
 })
 
 review1 = Review.create!({
