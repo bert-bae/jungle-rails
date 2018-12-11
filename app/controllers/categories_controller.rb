@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController[5.2]
+class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
