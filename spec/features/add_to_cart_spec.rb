@@ -4,7 +4,8 @@ def open_asset(file_name)
   File.open(Rails.root.join('db', 'seed_assets', file_name))
 end
 
-RSpec.feature "ProductDetails", type: :feature, js: true do
+RSpec.feature "AddToCarts", type: :feature, js:true do
+
   before :each do
 
     @category = Category.create! name:"Test Category"
@@ -20,16 +21,16 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     end
   end
 
-  scenario "They see specific product detail" do
+  scenario "See product added to cart" do
     # ACT
     visit root_path
 
-    first('article.product').find_link('Details').click
+    first('article.product').click_button('Add')
 
     # DEBUG / VERIFY
     save_screenshot 'photo.png'
     
-    expect(page).to have_text 'Leave a Review!'
+    expect(page).to have_text 'My Cart (1)'
   end
-  
+
 end
