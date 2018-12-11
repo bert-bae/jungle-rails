@@ -6,8 +6,6 @@ gem 'rails', '5.2.2'
 gem 'activesupport', '5.2.2'
 gem 'actionpack', '5.2.2'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.6'
 gem 'railties', '5.2.2'
@@ -48,6 +46,9 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'rspec-rails', '3.8.1'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
