@@ -5,6 +5,7 @@ ruby "2.4.5"
 gem 'rails', '5.2.2'
 gem 'activesupport', '5.2.2'
 gem 'actionpack', '5.2.2'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.6'
