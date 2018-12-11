@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :authorize, :only => [:create, :destroy]
+  before_action :authorize, :only => [:create, :destroy]
 
   def create
     @review = Review.new(params.require(:review).permit(:rating, :description))

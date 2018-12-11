@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def authorize
-    unless current_user.name == ENV[USERNAME] && current_user.password == ENV[PASSWORD]
+    unless current_user.email == ENV[USERNAME] && current_user.password == ENV[PASSWORD]
       redirect_to '/login' unless current_user
     else
       redirect_to '/'

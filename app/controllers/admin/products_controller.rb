@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-  before_filter :authorize
+  before_action :authorize
   def index
     @products = Product.order(id: :desc).all
   end

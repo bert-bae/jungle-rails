@@ -46,7 +46,7 @@
     <hr></hr>
     <% @product.reviews.reverse_each do |review| %>
       <div class="comments">
-        <p><strong>User: </strong><%= review.user.name %> - User Since <%= review.user.created_at.to_date %></p>
+        <p><strong>User: </strong><%= review.user.first_name %> - User Since <%= review.user.created_at.to_date %></p>
         <hr/>
         <p><strong>Rating: </strong><%= review.rating %></p>
         <p><strong>Description: </strong><%= review.description %></p>

@@ -25,10 +25,9 @@
         </div>
     </div>
   <% end %>
-  <span class="total-cost"><h4><strong>Total Price:</strong> $<%= @order.total_cents.to_f / 100 %></h4></span>
-
-  
+ 
   <div class="order-summary jumbotron">
+    <span class="total-cost"><h4><strong>Total Price:</strong> $<%= @order.total_cents.to_f / 100 %></h4></span>
     <h4>Thank you for your order!</h4>
     <h4>Email: <%= @order.email %></h4>
   </div>
