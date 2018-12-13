@@ -37,26 +37,26 @@ TODO:
 
 # Required Gems
 
--rails, 5.2.2
--activesupport, 5.2.2
--actionpack, 5.2.2
--pg
--sass-rails, ~> 5.0.6
--railties, 5.2.2
--uglifier, >= 1.3.0
--jquery-rails
--turbolinks
--jbuilder, ~> 2.0
--sdoc, ~> 0.4.0, group: :doc
--bcrypt, ~> 3.1.7
--puma
--bootstrap-sass, ~> 3.3.6
--font-awesome-rails
--money-rails
--carrierwave
--rmagick
--stripe
--faker
+- rails, 5.2.2
+- activesupport, 5.2.2
+- actionpack, 5.2.2
+- pg
+- sass-rails, ~> 5.0.6
+- railties, 5.2.2
+- uglifier, >= 1.3.0
+- jquery-rails
+- turbolinks
+- jbuilder, ~> 2.0
+- sdoc, ~> 0.4.0, group: :doc
+- bcrypt, ~> 3.1.7
+- puma
+- bootstrap-sass, ~> 3.3.6
+- font-awesome-rails
+- money-rails
+- carrierwave
+- rmagick
+- stripe
+- faker
 
 # Dev Specific
 
